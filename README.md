@@ -1,8 +1,10 @@
 # Fall16-Team14
 
-Team members
+#Project Name - 
 
-Pranjal Jain
-Rushin Naik
-Sucheta Mandal
-Surendra R Yadav
+# Team members
+
+[Pranjal Jain](https://github.com/jpranjal)
+[Rushin Naik](https://github.com/Rushin95)
+[Sucheta Mandal](https://github.com/suchetamandal)
+[Surendra R Yadav](https://github.com/surendrary)
