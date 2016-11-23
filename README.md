@@ -1,6 +1,6 @@
 # Fall16-Team14
 
-#Project Name - 
+#Project Name - WiseCare
 
 # Team members
 
