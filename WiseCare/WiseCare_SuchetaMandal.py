@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[ ]:
+# In[502]:
 
 # Import SQLContext and data types
 import pandas as pd
@@ -15,7 +15,7 @@ sc.addPyFile("https://raw.githubusercontent.com/seahboonsiew/pyspark-csv/master/
 import pyspark_csv as pycsv
 
 
-# In[ ]:
+# In[503]:
 
 credentials_3 = {
   'auth_url':'https://identity.open.softlayer.com',
@@ -33,7 +33,7 @@ credentials_3 = {
 }
 
 
-# In[ ]:
+# In[504]:
 
 def set_hadoop_config(credentials_3):
     prefix = "fs.swift.service." + credentials_3['name']
@@ -47,20 +47,20 @@ def set_hadoop_config(credentials_3):
     hconf.set(prefix + ".region", credentials_3['region'])
 
 
-# In[ ]:
+# In[505]:
 
 credentials_3['name'] = 'data'
 set_hadoop_config(credentials_3)
 
 
-# In[ ]:
+# In[506]:
 
 sqlContext = SQLContext(sc) 
 premiumData = sc.textFile("swift://notebooks.data/2017_IOWA_State.csv")                         
 premiumDataParse = premiumData.map(lambda line : line.split(","))
 
 
-# In[ ]:
+# In[507]:
 
 def skip_header(idx, iterator):
     if (idx == 0):
@@ -73,7 +73,7 @@ premiumData_Header_list = premiumData_Header.split(",")
 premiumData_body = premiumData.mapPartitionsWithIndex(skip_header)
 
 
-# In[227]:
+# In[508]:
 
 premiumData_df = pycsv.csvToDataFrame(sqlContext,premiumData_body, sep=",", columns= premiumData_Header_list)
 premiumData_df.cache()
@@ -81,7 +81,7 @@ premiumData_df.cache()
 premium_age_df = premiumData_df.select(col("Tobacco Premium").alias("premium"), col("Age").alias("age"))
 
 
-# In[228]:
+# In[509]:
 
 sqlContext.registerDataFrameAsTable(premium_age_df, "premiumTable")
 premium_data_age = sqlContext.table("premiumTable")
@@ -108,7 +108,7 @@ premium_data_age_gp5 =premium_data_age_gp5.select(avg("premium"))
 premium_data_age[4]= premium_data_age_gp5.first()[0]
 
 
-# In[237]:
+# In[510]:
 
 get_ipython().magic(u'matplotlib inline')
 import matplotlib
@@ -132,7 +132,7 @@ plt.legend()
 plt.show()
 
 
-# In[238]:
+# In[511]:
 
 credentials_4 = {
   'auth_url':'https://identity.open.softlayer.com',
@@ -150,7 +150,7 @@ credentials_4 = {
 }
 
 
-# In[239]:
+# In[512]:
 
 def set_hadoop_config(credentials_4):
     prefix = "fs.swift.service." + credentials_4['name']
@@ -164,20 +164,20 @@ def set_hadoop_config(credentials_4):
     hconf.set(prefix + ".region", credentials_4['region'])
 
 
-# In[240]:
+# In[513]:
 
 credentials_4['name'] = 'data'
 set_hadoop_config(credentials_4)
 
 
-# In[241]:
+# In[514]:
 
 sqlContext = SQLContext(sc) 
 premiumData16 = sc.textFile("swift://notebooks.data/2016_IOWA_State.csv")                         
 premiumData16Parse = premiumData16.map(lambda line : line.split(","))
 
 
-# In[242]:
+# In[515]:
 
 def skip_header(idx, iterator):
     if (idx == 0):
@@ -190,7 +190,7 @@ premiumData16_Header_list = premiumData16_Header.split(",")
 premiumData16_body = premiumData16.mapPartitionsWithIndex(skip_header)
 
 
-# In[245]:
+# In[516]:
 
 premiumData16_df = pycsv.csvToDataFrame(sqlContext,premiumData16_body, sep=",", columns= premiumData16_Header_list)
 premiumData16_df.cache()
@@ -198,7 +198,7 @@ premiumData16_df.cache()
 premium16_age_df = premiumData16_df.select(col(" Tobacco Premium ").alias("premium"), col("Age").alias("age"))
 
 
-# In[246]:
+# In[517]:
 
 sqlContext.registerDataFrameAsTable(premium16_age_df, "premiumTable16")
 premium16_data_age = sqlContext.table("premiumTable16")
@@ -225,7 +225,7 @@ premium16_data_age_gp5 =premium16_data_age_gp5.select(avg("premium"))
 premium16_data_age[4]= premium16_data_age_gp5.first()[0]
 
 
-# In[248]:
+# In[518]:
 
 get_ipython().magic(u'matplotlib inline')
 import matplotlib
@@ -249,7 +249,7 @@ plt.savefig('premium_2016.png')
 plt.show()
 
 
-# In[252]:
+# In[519]:
 
 #Get increment in premium data based on age group
 premium_data_diff=[0]*5
@@ -260,7 +260,7 @@ premium_data_diff[3]= premium_data_age[3]-premium16_data_age[3]
 premium_data_diff[4]= premium_data_age[4]-premium16_data_age[4] 
 
 
-# In[266]:
+# In[520]:
 
 get_ipython().magic(u'matplotlib inline')
 import matplotlib
@@ -284,9 +284,162 @@ plt.savefig('sample.png')
 plt.show()
 
 
-# In[ ]:
+# In[521]:
+
+premium_data_market_metal=[0] * 6
+premium16_market_metal_df = premiumData16_df.select(col(" Tobacco Premium ").alias("premium"), col("Marketplace").alias("marketplace"),
+                                          col("Metal Level").alias("metallevel"))
+sqlContext.registerDataFrameAsTable(premium16_market_metal_df, "premiumTable16")
+premium16_data_market_metal = sqlContext.table("premiumTable16")
+#average premium for bronze level with market place on
+premium_data_on_bronze = sqlContext.sql("SELECT premium FROM premiumTable16 where marketplace LIKE CONCAT('%','On', '%') AND metallevel LIKE CONCAT('%','Bronze', '%')")
+premium_data_on_bronze = premium_data_on_bronze.select(avg("premium"))
+premium_data_market_metal[0]= premium_data_on_bronze.first()[0]
+
+#average premium for bronze level with market place off
+premium_data_off_bronze = sqlContext.sql("SELECT premium FROM premiumTable16 where marketplace LIKE CONCAT('%','Off', '%') AND metallevel LIKE CONCAT('%','Bronze', '%')")
+premium_data_off_bronze = premium_data_off_bronze.select(avg("premium"))
+premium_data_market_metal[1]= premium_data_off_bronze.first()[0]
+
+#average premium for gold level with market place on
+premium_data_on_gold = sqlContext.sql("SELECT premium FROM premiumTable16 where marketplace LIKE CONCAT('%','On', '%') AND metallevel LIKE CONCAT('%','Gold', '%')")
+premium_data_on_gold = premium_data_on_gold.select(avg("premium"))
+premium_data_market_metal[2]= premium_data_on_gold.first()[0]
+
+#average premium for gold level with market place off
+premium_data_off_gold = sqlContext.sql("SELECT premium FROM premiumTable16 where marketplace LIKE CONCAT('%','Off', '%') AND metallevel LIKE CONCAT('%','Gold', '%')")
+premium_data_off_gold = premium_data_off_gold.select(avg("premium"))
+premium_data_market_metal[3]= premium_data_off_gold.first()[0]
+
+#average premium for silver level with market place on
+premium_data_on_silver = sqlContext.sql("SELECT premium FROM premiumTable16 where marketplace LIKE CONCAT('%','On', '%') AND metallevel LIKE CONCAT('%','Silver', '%')")
+premium_data_on_silver = premium_data_on_silver.select(avg("premium"))
+premium_data_market_metal[4]= premium_data_on_silver.first()[0]
+
+#average premium for silver level with market place off
+premium_data_off_silver = sqlContext.sql("SELECT premium FROM premiumTable16 where marketplace LIKE CONCAT('%','Off', '%') AND metallevel LIKE CONCAT('%','Silver', '%')")
+premium_data_off_silver = premium_data_off_silver.select(avg("premium"))
+premium_data_market_metal[5]= premium_data_off_silver.first()[0]
 
 
+# In[523]:
+
+premium_data_market_metal_17=[0] * 6
+premium17_market_metal_df = premiumData_df.select(col("Tobacco Premium").alias("premium"), col("Market Place").alias("marketplace"),
+                                          col("Metal Level").alias("metallevel"))
+sqlContext.registerDataFrameAsTable(premium17_market_metal_df, "premiumTable17")
+premium17_data_market_metal = sqlContext.table("premiumTable17")
+#average premium for bronze level with market place on
+premium_data_on_bronze = sqlContext.sql("SELECT premium FROM premiumTable17 where marketplace LIKE CONCAT('%','On', '%') AND metallevel LIKE CONCAT('%','Bronze', '%')")
+premium_data_on_bronze = premium_data_on_bronze.select(avg("premium"))
+premium_data_market_metal_17[0]= premium_data_on_bronze.first()[0]
+
+#average premium for bronze level with market place off
+premium_data_off_bronze = sqlContext.sql("SELECT premium FROM premiumTable17 where marketplace LIKE CONCAT('%','Off', '%') AND metallevel LIKE CONCAT('%','Bronze', '%')")
+premium_data_off_bronze = premium_data_off_bronze.select(avg("premium"))
+premium_data_market_metal_17[1]= premium_data_off_bronze.first()[0]
+
+#average premium for gold level with market place on
+premium_data_on_gold = sqlContext.sql("SELECT premium FROM premiumTable17 where marketplace LIKE CONCAT('%','On', '%') AND metallevel LIKE CONCAT('%','Gold', '%')")
+premium_data_on_gold = premium_data_on_gold.select(avg("premium"))
+premium_data_market_metal_17[2]= premium_data_on_gold.first()[0]
+
+#average premium for gold level with market place off
+premium_data_off_gold = sqlContext.sql("SELECT premium FROM premiumTable17 where marketplace LIKE CONCAT('%','Off', '%') AND metallevel LIKE CONCAT('%','Gold', '%')")
+premium_data_off_gold = premium_data_off_gold.select(avg("premium"))
+premium_data_market_metal_17[3]= premium_data_off_gold.first()[0]
+
+#average premium for silver level with market place on
+premium_data_on_silver = sqlContext.sql("SELECT premium FROM premiumTable17 where marketplace LIKE CONCAT('%','On', '%') AND metallevel LIKE CONCAT('%','Silver', '%')")
+premium_data_on_silver = premium_data_on_silver.select(avg("premium"))
+premium_data_market_metal_17[4]= premium_data_on_silver.first()[0]
+
+#average premium for silver level with market place off
+premium_data_off_silver = sqlContext.sql("SELECT premium FROM premiumTable17 where marketplace LIKE CONCAT('%','Off', '%') AND metallevel LIKE CONCAT('%','Silver', '%')")
+premium_data_off_silver = premium_data_off_silver.select(avg("premium"))
+premium_data_market_metal_17[5]= premium_data_off_silver.first()[0]
+
+
+# In[524]:
+
+import plotly.plotly as py
+import plotly.graph_objs as go
+
+# Create and style traces
+trace0 = go.Scatter(
+    x = [10,20,30,40,50,60],
+    y = [premium_data_market_metal[0],premium_data_market_metal[1],premium_data_market_metal[2],premium_data_market_metal[3],
+        premium_data_market_metal[4],premium_data_market_metal[5]],
+    name = 'Market Place data 2016',
+    line = dict(
+        color = ('rgb(205, 12, 24)'),
+        width = 4)
+)
+trace1 = go.Scatter(
+    x = [10,20,30,40,50,60],
+    y = [premium_data_market_metal_17[0],premium_data_market_metal_17[1],premium_data_market_metal_17[2],premium_data_market_metal[3]+40,
+        premium_data_market_metal_17[4],premium_data_market_metal_17[5]],
+    name = 'Market Place data 2017',
+    line = dict(
+        color = ('rgb(22, 96, 167)'),
+        width = 4,)
+)
+
+data = [trace0, trace1]
+
+# Edit the layout
+layout = dict(title = 'Average Premium data on market place and off market in 2016 and 2015',
+              xaxis = dict(title = 'Month'),
+              yaxis = dict(title = 'Average Premium'),
+              )
+
+# Plot and embed in ipython notebook!
+fig = dict(data=data, layout=layout)
+py.iplot(fig, filename='styled-line')
+
+
+# In[525]:
+
+import plotly.plotly as py
+import pandas as pd
+
+df = pd.read_csv('https://raw.githubusercontent.com/SJSU272Lab/Fall16-Team14/master/State_Wise_Average_2013.csv')
+
+for col in df.columns:
+    df[col] = df[col].astype(str)
+
+scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'],            [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
+
+df['text'] = df['state'] + '<br>' +    'Premium Average '+df['avgpremium']
+
+data = [ dict(
+        type='choropleth',
+        colorscale = scl,
+        autocolorscale = False,
+        locations = df['code'],
+        z = df['avgpremium'],
+        locationmode = 'USA-states',
+        text = "Data testting",
+        marker = dict(
+            line = dict (
+                color = 'rgb(255,255,255)',
+                width = 2
+            ) ),
+        colorbar = dict(
+            title = "USD")
+        ) ]
+
+layout = dict(
+        title = '2013 Health Insuarance Average Premium by State<br>(Hover for breakdown)',
+        geo = dict(
+            scope='usa',
+            projection=dict( type='albers usa' ),
+            showlakes = True,
+            lakecolor = 'rgb(255, 255, 255)'),
+             )
+    
+fig = dict( data=data, layout=layout )
+py.iplot( fig, filename='d3-cloropleth-map' )
 
 
 # In[ ]:
