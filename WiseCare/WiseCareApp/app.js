@@ -6,6 +6,7 @@
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
+  , routing = require('./routes/routing')
   , http = require('http')
   , path = require('path');
 
@@ -28,6 +29,12 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/form_validation', routing.form_validation);
+app.get('/general', routing.general);
+app.get('/stateBased', routing.stateBased);
+app.get('/metal', routing.metal);
+app.get('/premiumDiff', routing.premiumDiff);
+app.get('/deaths', routing.deaths);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
