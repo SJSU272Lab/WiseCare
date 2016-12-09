@@ -20,4 +20,7 @@ exports.premiumDiff = function(req, res){
 exports.deaths = function(req, res){
 	  res.render('deaths', { title: 'Deaths Per Year' });
 };
+exports.insured = function(req, res){
+	  res.render('insured', { title: 'Insured' });
+};
 	

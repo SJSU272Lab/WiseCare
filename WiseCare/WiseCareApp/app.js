@@ -35,6 +35,7 @@ app.get('/stateBased', routing.stateBased);
 app.get('/metal', routing.metal);
 app.get('/premiumDiff', routing.premiumDiff);
 app.get('/deaths', routing.deaths);
+app.get('/insured', routing.insured);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){

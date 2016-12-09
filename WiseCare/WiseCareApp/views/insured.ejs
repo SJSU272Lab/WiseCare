@@ -322,7 +322,7 @@
 					<h3 class="page-header"><i class="icon_piechart"></i> Chart</h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="/">Home</a></li>
-						<li><i class="icon_piechart"></i>Chart</li>
+						<li><i class="icon_piechart"></i>Graphs</li>
 						
 					</ol>
 				</div>
@@ -332,28 +332,71 @@
               <div class="col-lg-12">
                   <section class="panel">
                       <header class="panel-heading">
-                          <h3>General Chart</Char>
+                          <h3>Percentage of insured people</Char>
                       </header>
                       <div class="panel-body">
                         <div class="tab-pane" id="chartjs">
                       <div class="row">
                           <!-- Line -->
-                          <div class="col-lg-12">
+                          <div class="col-lg-2">
                               <section class="panel">
                                <header class="panel-heading">
-                                      Premium on market - off market prices
+                                      Select Year
                                   </header>
                                   <div class="panel-body text-center">
-                                       <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="//plot.ly/~suchetamandal/18.embed?link=false&modebar=true" height="425px" width="100%"></iframe>
+                                       <select>
+                                       <option selected="selected">Select</option>
+                                       <option data-toggle="modal" data-target="#myModal1">2013</option>
+                                       <option data-toggle="modal" data-target="#myModal2">2014</option>
+                                       <option data-toggle="modal" data-target="#myModal3">2015</option>
+                                       </select>
                                   </div>
                               </section>
                           </div>                      
                           <!-- Bar -->
                       </div>
+                  </div>
                       </div>
                       </div>
                     </section>
       </section>
+      
+      <div class="modal fade" id="myModal1"  role="dialog" >
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    
+                    <div class="modal-body" style="padding:0px">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="//plot.ly/~suchetamandal/40.embed?link=false&modebar=true" height="525px" width="100%"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal2"  role="dialog" >
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    
+                    <div class="modal-body" style="padding:0px">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="//plot.ly/~suchetamandal/42.embed?link=false&modebar=true" height="525px" width="100%"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal3"  role="dialog" >
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    
+                    <div class="modal-body" style="padding:0px">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="//plot.ly/~suchetamandal/44.embed?link=false&modebar=true" height="525px" width="100%"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
       <!--main content end-->
       <div class="text-right">
             <div class="credits">
