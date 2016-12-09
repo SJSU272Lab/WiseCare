@@ -1,0 +1,52 @@
+code	Location	Employer	Non-Group	Medicaid	Medicare	Other Public	Uninsured	Total	Insured
+AL	Alabama	0.46	0.06	0.19	0.15	0.03	0.11	1	89
+AK	Alaska	0.5	0.04	0.19	0.08	0.05	0.14	1	86
+AZ	Arizona	0.43	0.05	0.25	0.14	N/A	0.12	1	88
+AR	Arkansas	0.41	0.08	0.22	0.17	0.03	0.1	1	90
+CA	California	0.46	0.07	0.25	0.1	0.02	0.1	1	90
+CO	Colorado	0.46	0.07	0.2	0.12	0.04	0.11	1	89
+CT	Connecticut	0.58	0.06	0.15	0.12	0.01	0.07	1	93
+DE	Delaware	0.53	0.04	0.18	0.15	0.03	0.07	1	93
+DC	District of Columbia	0.54	0.06	0.25	0.08	N/A	0.06	1	94
+FL	Florida	0.39	0.08	0.19	0.17	0.02	0.15	1	85
+GA	Georgia	0.47	0.06	0.16	0.12	0.03	0.16	1	84
+HI	Hawaii	0.53	0.03	0.17	0.15	0.07	0.05	1	95
+ID	Idaho	0.51	0.08	0.17	0.11	0.02	0.11	1	89
+IL	Illinois	0.52	0.06	0.19	0.14	0.01	0.09	1	91
+IN	Indiana	0.51	0.05	0.17	0.15	N/A	0.11	1	89
+IA	Iowa	0.53	0.08	0.17	0.14	0.02	0.06	1	94
+KS	Kansas	0.52	0.06	0.15	0.13	N/A	0.11	1	89
+KY	Kentucky	0.46	0.06	0.23	0.17	N/A	0.07	1	93
+LA	Louisiana	0.45	0.05	0.23	0.11	0.03	0.13	1	87
+ME	Maine	0.47	0.05	0.2	0.16	0.02	0.09	1	91
+MD	Maryland	0.6	0.06	0.14	0.12	0.02	0.06	1	94
+MA	Massachusetts	0.53	0.05	0.24	0.13	N/A	0.04	1	96
+MI	Michigan	0.52	0.06	0.2	0.14	0.01	0.07	1	93
+MN	Minnesota	0.58	0.07	0.15	0.13	0.01	0.07	1	93
+MS	Mississippi	0.4	0.05	0.26	0.13	0.04	0.12	1	88
+MO	Missouri	0.54	0.06	0.15	0.15	0.02	0.09	1	91
+MT	Montana	0.47	0.09	0.13	0.15	0.03	0.13	1	87
+NE	Nebraska	0.53	0.07	0.14	0.14	0.03	0.1	1	90
+NV	Nevada	0.47	0.05	0.18	0.13	0.05	0.13	1	87
+NH	New Hampshire	0.59	0.06	0.12	0.15	N/A	0.07	1	93
+NJ	New Jersey	0.55	0.04	0.17	0.13	0.01	0.11	1	89
+NM	New Mexico	0.37	0.05	0.28	0.15	0.03	0.12	1	88
+NY	New York	0.49	0.06	0.25	0.12	0.01	0.08	1	92
+NC	North Carolina	0.48	0.06	0.18	0.14	0.03	0.12	1	88
+ND	North Dakota	0.59	0.08	0.09	0.13	0.02	0.09	1	91
+OH	Ohio	0.5	0.04	0.21	0.16	0.01	0.07	1	93
+OK	Oklahoma	0.45	0.05	0.17	0.14	0.02	0.16	1	84
+OR	Oregon	0.46	0.07	0.21	0.16	0.02	0.08	1	92
+PA	Pennsylvania	0.53	0.06	0.17	0.15	0.01	0.08	1	92
+RI	Rhode Island	0.54	0.09	0.18	0.13	N/A	0.05	1	95
+SC	South Carolina	0.46	0.04	0.2	0.15	0.02	0.13	1	87
+SD	South Dakota	0.55	0.07	0.12	0.15	0.02	0.09	1	91
+TN	Tennessee	0.5	0.06	0.16	0.15	N/A	0.1	1	90
+TX	Texas	0.47	0.06	0.18	0.1	0.02	0.17	1	83
+UT	Utah	0.59	0.08	0.1	0.1	0.01	0.12	1	88
+VT	Vermont	0.52	0.07	0.21	0.13	0.02	0.06	1	94
+VA	Virginia	0.55	0.07	0.09	0.13	0.06	0.1	1	90
+WA	Washington	0.48	0.07	0.22	0.12	0.02	0.09	1	91
+WV	West Virginia	0.43	0.04	0.29	0.17	0.01	0.06	1	94
+WI	Wisconsin	0.55	0.06	0.17	0.14	N/A	0.07	1	93
+WY	Wyoming	0.61	0.06	0.1	0.11	0.02	0.1	1	90
