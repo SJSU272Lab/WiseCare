@@ -1,4 +1,4 @@
-﻿stcode,Location,Employer,Non-Group,Medicaid,Medicare,Other Public,Uninsured,Total,Insured
+Code,Location,Employer,Non-Group,Medicaid,Medicare,Other Public,Uninsured,Total,Insured
 AL,Alabama,0.46,0.06,0.19,0.15,0.03,0.11,1,89
 AK,Alaska,0.5,0.04,0.19,0.08,0.05,0.14,1,86
 AZ,Arizona,0.43,0.05,0.25,0.14,N/A,0.12,1,88
