@@ -23,4 +23,7 @@ exports.deaths = function(req, res){
 exports.insured = function(req, res){
 	  res.render('insured', { title: 'Insured' });
 };
+exports.claims = function(req, res){
+	  res.render('Claims', { title: 'Claims' });
+};
 	
