@@ -1,0 +1,83 @@
+﻿
+Location,Employer,Non-Group,Medicaid,Other Public,Uninsured,Total
+Alabama,0.3,0.11,0.24,0.11,0.23,1
+Alaska,0.22,0.05,0.37,0.05,0.3,1
+Arizona,0.21,0.05,0.41,0.07,0.25,1
+Arkansas,0.25,0.13,0.29,0.11,0.21,1
+California,0.2,0.12,0.44,0.05,0.18,1
+Colorado,0.27,0.09,0.32,0.09,0.22,1
+Connecticut,0.23,0.1,0.4,0.09,0.18,1
+Delaware,0.31,0.11,0.35,0.1,0.13,1
+District of Columbia,0.21,0.13,0.55,0.03,0.09,1
+Florida,0.21,0.16,0.24,0.08,0.31,1
+Georgia,0.26,0.09,0.24,0.06,0.35,1
+Hawaii,0.37,0.05,0.35,0.13,0.1,1
+Idaho,0.31,0.11,0.21,0.07,0.3,1
+Illinois,0.32,0.1,0.37,0.05,0.16,1
+Indiana,0.27,0.08,0.32,0.06,0.27,1
+Iowa,0.33,0.11,0.32,N/A,0.18,1
+Kansas,0.38,0.1,0.17,0.06,0.28,1
+Kentucky,0.24,0.17,0.4,0.07,0.12,1
+Louisiana,0.27,0.09,0.27,0.11,0.26,1
+Maine,0.24,0.11,0.47,N/A,0.11,1
+Maryland,0.28,0.14,0.35,0.08,0.16,1
+Massachusetts,0.26,0.09,0.54,0.03,0.08,1
+Michigan,0.29,0.08,0.41,0.07,0.15,1
+Minnesota,0.26,0.13,0.33,N/A,0.21,1
+Mississippi,0.25,0.11,0.27,0.09,0.28,1
+Missouri,0.31,0.12,0.21,0.08,0.29,1
+Montana,0.31,0.09,0.24,0.12,0.24,1
+Nebraska,0.33,0.1,0.26,N/A,0.28,1
+Nevada,0.3,0.1,0.28,0.09,0.23,1
+New Hampshire,0.31,0.11,0.4,0.07,0.12,1
+New Jersey,0.21,0.11,0.37,0.07,0.24,1
+New Mexico,0.21,0.07,0.41,0.06,0.25,1
+New York,0.25,0.14,0.42,0.04,0.15,1
+North Carolina,0.29,0.11,0.25,0.06,0.29,1
+North Dakota,0.39,0.12,0.21,0.09,0.19,1
+Ohio,0.26,0.05,0.43,0.08,0.18,1
+Oklahoma,0.32,0.1,0.23,0.08,0.28,1
+Oregon,0.25,0.12,0.42,0.06,0.15,1
+Pennsylvania,0.26,0.11,0.4,0.05,0.18,1
+Rhode Island,0.29,0.13,0.4,N/A,0.12,1
+South Carolina,0.3,0.09,0.24,0.09,0.27,1
+South Dakota,0.33,N/A,0.24,0.05,0.25,1
+Tennessee,0.23,0.1,0.29,0.12,0.27,1
+Texas,0.3,0.09,0.14,0.06,0.4,1
+Utah,0.39,0.1,0.19,0.05,0.27,1
+Vermont,0.29,0.13,0.38,0.07,0.12,1
+Virginia,0.27,0.17,0.18,0.11,0.27,1
+Washington,0.19,0.1,0.47,0.06,0.18,1
+West Virginia,0.23,0.05,0.48,0.1,0.13,1
+Wisconsin,0.35,0.09,0.33,0.05,0.18,1
+Wyoming,0.36,0.12,0.19,0.09,0.25,1
+
+Notes
+The majority of our health coverage topics are based on analysis of the Census Bureau’s March Supplement to the Current Population Survey (the CPS Annual Social and Economic Supplement or ASEC) by the Kaiser Commission on Medicaid and the Uninsured. The CPS supplement is the primary source of annual health insurance coverage information in the United States.
+
+In this analysis, income (mostly categorized as a percent of the federal poverty level) is aggregated by Census-defined family units. Analyzing income by family unit captures income available to a group of people who are likely sharing resources. However, family units may not be the appropriate measure for capturing eligibility for health insurance.  Eligibility for health insurance is more accurately estimated using health insurance units, which may be counted differently for different types of insurance (such as Medicaid or employer coverage).
+
+Adults refer to nonelderly individuals ages 19-64. Data exclude a small number of people with private coverage of an unknown source.  Data may not sum to totals due to rounding and the exclusion of these people.
+
+The U.S. Census Bureau's poverty threshold for a family with two adults and one child was $19,078 in 2015. This is the official measurement of poverty used by the Federal Government, and the measure used for most poverty-based data presented on State Health Facts.  The Department of Health and Human Services (HHS) produces simplified - but very similar - versions of these poverty thresholds called poverty guidelines that are used to assess eligibility for income-based programs such as Medicaid.  For more information on measures of poverty, please see the detailed description provided by HHS: [http://aspe.hhs.gov/poverty/faq.cfm](http://aspe.hhs.gov/poverty/faq.cfm).
+
+Sources
+Kaiser Family Foundation estimates based on the Census Bureau's March 2016 Current Population Survey (CPS: Annual Social and Economic Supplements).
+
+Definitions
+The ASEC asks respondents about their health insurance coverage throughout the previous calendar year. Respondents may report having more than one type of coverage. In this analysis, individuals are sorted into only one category of insurance coverage using the following hierarchy:
+
+*Medicaid*: Includes those covered by Medicaid, the Children’s Health Insurance Program (CHIP), and those who have both Medicaid and another type of coverage, such as dual eligibles who are also covered by Medicare.
+
+*Employer*: Includes those covered by employer-sponsored coverage either through their own job or as a dependent in the same household.
+
+*Other Public*: Includes those covered under the military or Veterans Administration as well as nonelderly Medicare enrollees.
+
+*Non-Group*: Includes individuals and families that purchased or are covered as a dependent by non-group insurance.
+
+*Uninsured*: Includes those without health insurance and those who have coverage under the Indian Health Service only.
+
+For example, a person having Medicaid coverage in the first half of the year but employer-based coverage in the last months of the year would be categorized as having Medicaid coverage in this analysis.
+
+*N/A*: Estimates with relative standard errors greater than 30% are not provided.
+
