@@ -1,52 +1,52 @@
 state,location,annualincome
-AL,Alabama,$44509
-AK,Alaska,$75112
-AZ,Arizona,$52248
-AR,Arkansas,$42798
-CA,California,$63636
-CO,Colorado,$66596
-CT,Connecticut,$72889
-DE,Delaware,$57756
-DC,District of Columbia,$70071
-FL,Florida,$48825
-GA,Georgia,$50768
-HI,Hawaii,$64514
-ID,Idaho,$51624
-IL,Illinois,$60413
-IN,Indiana,$51983
-IA,Iowa,$60855
-KS,Kansas,$54865
-KY,Kentucky,$42387
-LA,Louisiana,$45922
-ME,Maine,$50756
-MD,Maryland,$73594
-MA,Massachusetts,$67861
-MI,Michigan,$54203
-MN,Minnesota,$68730
-MS,Mississippi,$40037
-MO,Missouri,$59196
-MT,Montana,$51395
-NE,Nebraska,$60474
-NV,Nevada,$52008
-NH,New Hampshire,$75675
-NJ,New Jersey,$68357
-NM,New Mexico,$45119
-NY,New York,$58005
-NC,North Carolina,$50797
-ND,North Dakota,$57415
-OH,Ohio,$53301
-OK,Oklahoma,$47077
-OR,Oregon,$60834
-PA,Pennsylvania,$60389
-RI,Rhode Island,$55701
-SC,South Carolina,$46360
-SD,South Dakota,$55065
-TN,Tennessee,$47330
-TX,Texas,$56473
-UT,Utah,$66258
-VT,Vermont,$59494
-VA,Virginia,$61486
-WA,Washington,$67243
-WV,West Virginia,$42824
-WI,Wisconsin,$55425
-WY,Wyoming,$60925
+AL,Alabama,44509
+AK,Alaska,75112
+AZ,Arizona,52248
+AR,Arkansas,42798
+CA,California,63636
+CO,Colorado,66596
+CT,Connecticut,72889
+DE,Delaware,57756
+DC,District of Columbia,70071
+FL,Florida,48825
+GA,Georgia,50768
+HI,Hawaii,64514
+ID,Idaho,51624
+IL,Illinois,60413
+IN,Indiana,51983
+IA,Iowa,60855
+KS,Kansas,54865
+KY,Kentucky,42387
+LA,Louisiana,45922
+ME,Maine,50756
+MD,Maryland,73594
+MA,Massachusetts,67861
+MI,Michigan,54203
+MN,Minnesota,68730
+MS,Mississippi,40037
+MO,Missouri,59196
+MT,Montana,51395
+NE,Nebraska,60474
+NV,Nevada,52008
+NH,New Hampshire,75675
+NJ,New Jersey,68357
+NM,New Mexico,45119
+NY,New York,58005
+NC,North Carolina,50797
+ND,North Dakota,57415
+OH,Ohio,53301
+OK,Oklahoma,47077
+OR,Oregon,60834
+PA,Pennsylvania,60389
+RI,Rhode Island,55701
+SC,South Carolina,46360
+SD,South Dakota,55065
+TN,Tennessee,47330
+TX,Texas,56473
+UT,Utah,66258
+VT,Vermont,59494
+VA,Virginia,61486
+WA,Washington,67243
+WV,West Virginia,42824
+WI,Wisconsin,55425
+WY,Wyoming,60925
