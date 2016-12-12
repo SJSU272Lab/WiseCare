@@ -1,4 +1,4 @@
-﻿code,location,annualincome
+state,location,annualincome
 AL,Alabama,$44509
 AK,Alaska,$75112
 AZ,Arizona,$52248
@@ -50,4 +50,3 @@ WA,Washington,$67243
 WV,West Virginia,$42824
 WI,Wisconsin,$55425
 WY,Wyoming,$60925
-
